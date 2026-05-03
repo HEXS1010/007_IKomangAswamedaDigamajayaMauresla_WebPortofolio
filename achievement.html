@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <!-- logo + warna tab -->
+    <meta name="theme-color" content="#15803d" />
+    <link rel="icon" href="img/logo_portofolio.png" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="achievement.css" />
+
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <!-- logo -->
+      <div class="nav-logo">Porto<span>.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-item active">Home</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#projek" class="nav-item">Projects</a></li>
+        <li><a href="achievement.html" class="nav-item">Achievement</a></li>
+        <li><a href="#skill" class="nav-item">Skills</a></li>
+        <li><a href="#kontak" class="nav-item">Contact</a></li>
+      </ul>
+      <a href="#" class="nav-btn">Let's Talk</a>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- sidebar hamburger -->
+    <div class="sidebar" id="sidebar"> 
+      <div class="sidebar-header">
+        <div class="sidebar-logo">Porto<span>.</span></div>
+        <button class="sidebar-close" id="sidebarClose">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Daftar menu -->
+      <ul class="sidebar-links">
+        <li><a href="#home" class="sidebar-item active">Home</a></li>
+        <li><a href="#about" class="sidebar-item">About</a></li>
+        <li><a href="#projek" class="sidebar-item">Projects</a></li>
+        <li><a href="achievement.html" class="sidebar-item">Achievement</a></li>
+        <li><a href="#skill" class="sidebar-item">Skills</a></li>
+        <li><a href="#kontak" class="sidebar-item">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- overlay sidebar -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- achievement -->
+    <section class="achievement-section" id="achievement">
+      <div class="achievement-header">
+        <div class="achievement-eyebrow">
+          <i class="fa-solid fa-trophy"></i> Pencapaian
+        </div>
+        <h2 class="achievement-title">Achievement<span>.</span></h2>
+        <p class="achievement-subtitle">
+          Setiap pencapaian adalah bukti dari kerja keras, konsistensi, dan
+          semangat yang tidak pernah padam.
+        </p>
+        <div class="title-accent">
+          <div class="title-accent-dot"></div>
+        </div>
+      </div>
+
+      <!-- GRID: 4 cards -->
+      <div class="achievement-grid" id="achievement-grid">
+        <!-- Card 1 -->
+        <div class="achiev-card" onclick="openModal(0)">
+          <div class="achiev-thumb">
+            <img
+              src="img/achievement1.jpg""
+              alt="Achievement 1"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="achiev-badge">Lomba Nasional</span>
+          </div>
+          <div class="achiev-body">
+            <p class="achiev-date">15 Maret 2024</p>
+            <h3 class="achiev-name">Juara 1 Hackathon Nasional</h3>
+            <p class="achiev-short">
+              Meraih juara pertama dalam kompetisi hackathon tingkat nasional dengan mengembangkan web UMKM
+            </p>
+            <span class="achiev-arrow"
+              >Lihat detail <i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="achiev-card" onclick="openModal(1)">
+          <div class="achiev-thumb">
+            <img
+              src="img/achievement2.png"
+              alt="Achievement 2"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="achiev-badge">Lomba Nasional</span>
+          </div>
+          <div class="achiev-body">
+            <p class="achiev-date">22 Agustus 2023</p>
+            <h3 class="achiev-name">Juara 1 techtopia VOL.1</h3>
+            <p class="achiev-short">
+              meraih juara pertama dalam kompetisi techtopia tingkat nasional dengan mengembangkan web pelatihan coding
+            </p>
+            <span class="achiev-arrow"
+              >Lihat detail <i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="achiev-card" onclick="openModal(2)">
+          <div class="achiev-thumb">
+            <img
+              src="img/achievement3.jpeg"
+              alt="Achievement 3"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="achiev-badge">sertifikat</span>
+          </div>
+          <div class="achiev-body">
+            <p class="achiev-date">10 Juni 2023</p>
+            <h3 class="achiev-name">Sertifikat Belajar Dasar AI Dicoding</h3>
+            <p class="achiev-short">
+              Sertifikan ini diraih dengan mengikuti bootcamp dari Dicoding, yang dimana saya menyelesaikan pelajaran Dasar AI
+            </p>
+            <span class="achiev-arrow"
+              >Lihat detail <i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="achiev-card" onclick="openModal(3)">
+          <div class="achiev-thumb">
+            <img
+              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80"
+              alt="Achievement 4"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="achiev-badge">Sertifikat</span>
+          </div>
+          <div class="achiev-body">
+            <p class="achiev-date">5 Februari 2023</p>
+            <h3 class="achiev-name">Sertifikat Cisco Certified Network Associate</h3>
+            <p class="achiev-short">
+              Saya mendapatkan sertifikat ini dari cisco setelah menyelesaikan pembelajaran yang diberikan cisco.
+            </p>
+            <span class="achiev-arrow"
+              >Lihat detail <i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </div>
+        </div>
+
+        <!-- Card 1 -->
+        <div class="achiev-card" onclick="openModal(0)">
+          <div class="achiev-thumb">
+            <img
+              src="img/achievement1.jpg""
+              alt="Achievement 1"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="achiev-badge">Lomba Nasional</span>
+          </div>
+          <div class="achiev-body">
+            <p class="achiev-date">15 Maret 2024</p>
+            <h3 class="achiev-name">Juara 1 Hackathon Nasional</h3>
+            <p class="achiev-short">
+              Meraih juara pertama dalam kompetisi hackathon tingkat nasional dengan mengembangkan web UMKM
+            </p>
+            <span class="achiev-arrow"
+              >Lihat detail <i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="achiev-card" onclick="openModal(1)">
+          <div class="achiev-thumb">
+            <img
+              src="img/achievement2.png"
+              alt="Achievement 2"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="achiev-badge">Lomba Nasional</span>
+          </div>
+          <div class="achiev-body">
+            <p class="achiev-date">22 Agustus 2023</p>
+            <h3 class="achiev-name">Juara 1 techtopia VOL.1</h3>
+            <p class="achiev-short">
+              meraih juara pertama dalam kompetisi techtopia tingkat nasional dengan mengembangkan web pelatihan coding
+            </p>
+            <span class="achiev-arrow"
+              >Lihat detail <i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="achiev-card" onclick="openModal(2)">
+          <div class="achiev-thumb">
+            <img
+              src="img/achievement3.jpeg"
+              alt="Achievement 3"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="achiev-badge">sertifikat</span>
+          </div>
+          <div class="achiev-body">
+            <p class="achiev-date">10 Juni 2023</p>
+            <h3 class="achiev-name">Sertifikat Belajar Dasar AI Dicoding</h3>
+            <p class="achiev-short">
+              Sertifikan ini diraih dengan mengikuti bootcamp dari Dicoding, yang dimana saya menyelesaikan pelajaran Dasar AI
+            </p>
+            <span class="achiev-arrow"
+              >Lihat detail <i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="achiev-card" onclick="openModal(3)">
+          <div class="achiev-thumb">
+            <img
+              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80"
+              alt="Achievement 4"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="achiev-badge">Sertifikat</span>
+          </div>
+          <div class="achiev-body">
+            <p class="achiev-date">5 Februari 2023</p>
+            <h3 class="achiev-name">Cisco Certified Network Associate</h3>
+            <p class="achiev-short">
+              Saya mendapatkan sertifikat ini dari cisco setelah menyelesaikan pembelajaran yang diberikan cisco.
+            </p>
+            <span class="achiev-arrow"
+              >Lihat detail <i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- pop up achievement -->
+    <div
+      class="ach-popup-bg"
+      id="ach-popup-bg"
+      onclick="achCloseOutside(event)"
+    >
+      <div class="ach-popup" id="ach-popup">
+        <img class="ach-popup-img" id="ach-popup-img" src="" alt="" />
+        <div class="ach-popup-body">
+          <div class="ach-popup-top">
+            <span class="ach-popup-badge" id="ach-popup-badge"></span>
+            <button class="ach-popup-close" onclick="achClose()">✕</button>
+          </div>
+          <h3 class="ach-popup-title" id="ach-popup-title"></h3>
+          <p class="ach-popup-date" id="ach-popup-date"></p>
+          <div class="ach-popup-divider"></div>
+          <p class="ach-popup-desc" id="ach-popup-desc"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
+      <!-- top row -->
+      <div class="footer-top">
+        <!-- brand -->
+        <div class="footer-brand">
+          <div class="footer-logo">Porto<span>.</span></div>
+          <p class="footer-brand-desc">
+            Menuangkan ide, tenaga, dan kreativitas itu hanya sebagain kecil,
+            namun kerja keras itu di mulai dari konsisten hingga saat ini.
+          </p>
+          <div class="hero-socials">
+            <a href="#" class="social-link" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#" class="social-link" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- nav links -->
+        <div class="footer-col">
+          <p class="footer-col-title">Navigasi</p>
+          <ul class="footer-links">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#projek" class="footer-link">Projects</a></li>
+            <li><a href="#skill" class="footer-link">Skills</a></li>
+            <li><a href="#kontak" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- tech stack -->
+        <div class="footer-col">
+          <p class="footer-col-title">Skill & Tools</p>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">HTML & CSS</a></li>
+            <li><a href="index.html" class="footer-link">JavaScript</a></li>
+            <li><a href="index.html" class="footer-link">React</a></li>
+            <li><a href="index.html" class="footer-link">Tailwind CSS</a></li>
+            <li><a href="index.html" class="footer-link">Python</a></li>
+            <li><a href="index.html" class="footer-link">Git</a></li>
+            <li><a href="index.html" class="footer-link">Github</a></li>
+          </ul>
+        </div>
+
+        <!-- contact info -->
+        <div class="footer-col">
+          <p class="footer-col-title">Hubungi kami</p>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:aswameda@email.com" class="footer-link">
+                <i class="fa-solid fa-envelope"></i> aswameda@email.com
+              </a>
+            </li>
+            <li>
+              <span class="footer-link no-hover">
+                <i class="fa-solid fa-location-dot"></i> Indonesia
+              </span>
+            </li>
+            <li>
+              <span class="footer-link no-hover footer-status">
+                <i class="fa-solid fa-circle"></i> Open for Work
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- divider -->
+      <div class="footer-divider"></div>
+
+      <!-- bottom row -->
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 <span>Hexs Preject</span>. All rights reserved.
+        </p>
+        <p class="footer-credit">Design by <span>Aswameda.</span></p>
+      </div>
+    </footer>
+
+    <script src="achievement.js"></script>
+    <script src="dark.js"></script>
+  </body>
+</html>
