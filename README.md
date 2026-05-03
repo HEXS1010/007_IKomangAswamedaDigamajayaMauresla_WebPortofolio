@@ -5,6 +5,7 @@ website portofolio ini merupakan representasi digital dari karya dan kemampuan s
 Dengan desain yang modern dan responsif, website ini menampilkan berbagai proyek yang telah saya kerjakan serta menunjukan keahlian saya dalam membangun website yang fungsional dan menarik.
 
 
+
 ## 🚀 Fitur
 - Halaman Projek
 - Halaman Pencapaian
@@ -14,16 +15,20 @@ Dengan desain yang modern dan responsif, website ini menampilkan berbagai proyek
 - Navigasi Interaktif
 
 
+
 # 🌐 preview website
 
-**Light_Mode**
+## Hero
+##### **Light_Mode**
 ![gambar](github/light-mode.png)
 
-**Dark_Mode**
+##### **Dark_Mode**
 ![gambar](github/dark-mode.png)
 
-**Skill & Tools**
+## Skill & Tools
+##### **Dark_mode**
 ![gambar](github/skill.png)
+
 
 
 # 🛠️ Teknologi & Tools
