@@ -126,7 +126,7 @@ function achCloseOutside(e) {
   }
 }
 
-// Close with ESC key
+// tombol esc
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") achClose();
 });

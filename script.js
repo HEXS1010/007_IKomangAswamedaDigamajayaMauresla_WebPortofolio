@@ -227,7 +227,7 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
-// ESC key
+// tombol esc 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeModal();
 });
