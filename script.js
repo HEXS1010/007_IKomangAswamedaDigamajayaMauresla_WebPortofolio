@@ -227,10 +227,59 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
-// tombol esc 
+// tombol esc
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeModal();
 });
 
 // init slider
 buildDots();
+
+// data github static
+async function loadGitHubStats() {
+  try {
+    const res = await fetch("https://api.github.com/users/HEXS1010");
+    if (!res.ok) return;
+    const data = await res.json();
+
+    function countUp(el, target) {
+      if (!el) return;
+      let start = 0;
+      const step = target / (1200 / 16);
+      const timer = setInterval(() => {
+        start += step;
+        if (start >= target) {
+          el.textContent = target;
+          clearInterval(timer);
+        } else {
+          el.textContent = Math.floor(start);
+        }
+      }, 16);
+    }
+
+    countUp(document.getElementById("gh-repos"), data.public_repos ?? 0);
+    countUp(document.getElementById("gh-followers"), data.followers ?? 0);
+    countUp(document.getElementById("gh-following"), data.following ?? 0);
+
+    const yearEl = document.getElementById("gh-year");
+    if (yearEl && data.created_at) {
+      yearEl.textContent = new Date(data.created_at).getFullYear();
+    }
+  } catch (e) {
+    console.warn("GitHub API error:", e);
+  }
+}
+
+// jalankan saat section masuk viewport
+const ghSection = document.getElementById("github");
+if (ghSection) {
+  new IntersectionObserver(
+    (entries, obs) => {
+      if (entries[0].isIntersecting) {
+        loadGitHubStats();
+        obs.disconnect();
+      }
+    },
+    { threshold: 0.2 },
+  ).observe(ghSection);
+}

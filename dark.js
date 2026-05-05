@@ -600,6 +600,31 @@ darkStyles.textContent = `
   background: #9fef00;
 }
 
+/* github aktivitas */
+:root.dark .gh-launch {
+  color: var(--off-white);
+}
+
+:root.dark .gh-main-title {
+  color: var(--dark);
+}
+
+:root.dark .gh-stat-num {
+  color: var(--dark);
+}
+
+:root.dark .gh-stat-item:hover .gh-stat-icon {
+  color: var(--green-light);
+}
+
+:root.dark .gh-stat-item:hover .gh-stat-num {
+  color: var(--green-light);
+}
+
+:root.dark .gh-legend-box {
+  background: #22c55e;
+}
+
   /* Toggle button */
   .theme-toggle {
     position: fixed;

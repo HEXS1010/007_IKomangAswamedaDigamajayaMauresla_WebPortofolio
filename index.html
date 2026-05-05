@@ -76,7 +76,6 @@
     <!-- overlay sidebar -->
     <div class="overlay" id="overlay"></div>
 
-
     <!-- hero-->
     <section class="hero" id="home">
       <!-- hero kiri -->
@@ -513,6 +512,98 @@
                 deployment project.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- github aktivitas -->
+    <section class="github-activity" id="github">
+      <!-- top bar -->
+      <div class="gh-topbar">
+        <div class="gh-topbar-left">
+          <span class="gh-brand">HEXS1010</span>
+          <span class="gh-sep">|</span>
+          <span class="gh-status"> <span class="gh-dot"></span> ONLINE </span>
+        </div>
+        <a href="https://github.com/HEXS1010" target="_blank" class="gh-launch">
+          ↗ Kunjungi Github saya
+        </a>
+      </div>
+
+      <!-- heading utama -->
+      <div class="gh-hero">
+        <h2 class="gh-main-title">
+          GITHUB
+          <em class="gh-title-accent">ACTIVITY.</em>
+        </h2>
+        <p class="gh-hero-desc">
+         Ini adalah grafik aktivitas saya di github, yang dimana fungsinya adalah menunjukan konsiten saya dalam ngoding.
+        </p>
+      </div>
+
+      <!-- konten: stats + graph -->
+      <div class="gh-content">
+        <!-- panel kiri: stats -->
+        <div class="gh-stats-panel">
+          <div class="gh-stat-item">
+            <span class="gh-stat-num" id="gh-repos">—</span>
+            <span class="gh-stat-sub">REPOS</span>
+            <span class="gh-stat-icon"
+              ><i class="fa-solid fa-folder-open"></i
+            ></span>
+          </div>
+          <div class="gh-stat-item">
+            <span class="gh-stat-num" id="gh-followers">—</span>
+            <span class="gh-stat-sub">FOLLOWERS</span>
+            <span class="gh-stat-icon"><i class="fa-solid fa-users"></i></span>
+          </div>
+          <div class="gh-stat-item">
+            <span class="gh-stat-num" id="gh-following">—</span>
+            <span class="gh-stat-sub">FOLLOWING</span>
+            <span class="gh-stat-icon"
+              ><i class="fa-solid fa-user-plus"></i
+            ></span>
+          </div>
+          <div class="gh-stat-item">
+            <span class="gh-stat-num" id="gh-year">—</span>
+            <span class="gh-stat-sub">JOINED</span>
+            <span class="gh-stat-icon"
+              ><i class="fa-solid fa-calendar-days"></i
+            ></span>
+          </div>
+        </div>
+
+        <!-- panel kanan: contribution graph -->
+        <div class="gh-graph-panel">
+          <div class="gh-graph-header">
+            <div>
+              <span class="gh-graph-title">SYSTEM_LOG</span>
+              <span class="gh-graph-desc"
+                >Annual code contribution density (last 12 months)</span
+              >
+            </div>
+            <div class="gh-graph-legend">
+              <span class="gh-legend-text">LESS</span>
+              <span class="gh-legend-box" style="opacity: 0.15"></span>
+              <span class="gh-legend-box" style="opacity: 0.35"></span>
+              <span class="gh-legend-box" style="opacity: 0.6"></span>
+              <span class="gh-legend-box" style="opacity: 0.8"></span>
+              <span class="gh-legend-box" style="opacity: 1"></span>
+              <span class="gh-legend-text">MORE</span>
+            </div>
+          </div>
+          <div class="gh-graph-wrap">
+            <img
+              src="https://ghchart.rshah.org/22c55e/HEXS1010"
+              alt="GitHub Contribution Graph"
+              class="gh-graph-img"
+              loading="lazy"
+              onerror="
+                this.parentElement.innerHTML =
+                  '<p class=\'gh-img-error\'>[ contribution data unavailable ]</p>'
+              "
+            />
           </div>
         </div>
       </div>
