@@ -29,11 +29,11 @@ Dengan desain yang modern dan responsif, website ini menampilkan berbagai proyek
 
 ##### **Light_Mode**
 
-![gambar](.github/light-mode.png)
+![gambar](penjelasan/light-mode.png)
 
 ##### **Dark_Mode**
 
-![gambar](.github/dark-mode.png)
+![gambar](penjelasan/dark-mode.png)
 
 ## Skill & Tools
 
@@ -43,7 +43,9 @@ Dengan desain yang modern dan responsif, website ini menampilkan berbagai proyek
 
 ##### **Dark_mode**
 
-![gambar](.github/skill.png)
+![gambar](penjelasan/skill.png)
+
+
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HEXS1010/HEXS1010/output/pacman-contribution-graph-dark.svg">
@@ -52,3 +54,4 @@ Dengan desain yang modern dan responsif, website ini menampilkan berbagai proyek
 </picture>
 
 ###
+
