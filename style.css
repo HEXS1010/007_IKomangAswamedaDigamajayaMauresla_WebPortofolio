@@ -678,8 +678,8 @@ ul {
 .about-bg {
   position: absolute;
   inset: 0;
-  opacity: 0.9;
-  background-image: url("img/about_me.png");
+  opacity: 0.6;
+  background-image: url("img/bg-about-light.png");
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -1242,6 +1242,21 @@ ul {
   overflow: hidden;
 }
 
+/* dot bg */
+.skills::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(22, 163, 74, 0.436) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 28px 28px;
+  z-index: 0;
+  pointer-events: none;
+}
+
 /* Left */
 .skills-left {
   top: 120px;
@@ -1727,7 +1742,6 @@ ul {
   text-align: center;
   padding: 24px;
 }
-
 
 /* responsif github */
 @media (max-width: 1024px) {
