@@ -2,7 +2,6 @@
 
 ## Identitas
 Nama: I Komang Aswameda Digamajaya Maureska <br>
-
 Instansi: SMA (SLUA) saraswati 1 Denpasar
 
 
