@@ -1,5 +1,10 @@
 # **Website Portofolio**
 
+## Identitas
+Nama: I Komang Aswameda Digamajaya Maureska
+Instansi: SMA (SLUA) saraswati 1 Denpasar
+
+
 ## 📄 Deskripsi
 
 website portofolio ini merupakan representasi digital dari karya dan kemampuan saya sebagai web developer.
@@ -25,26 +30,36 @@ Dengan desain yang modern dan responsif, website ini menampilkan berbagai proyek
 
 # 🌐 preview website
 
-## Hero
+##### **Light_Mode** 🌤️🌤️
 
-##### **Light_Mode**
+![gambar](github/light-mode-hero.png)
 
-![gambar](github/light-mode.png)
+![gambar](github/light-mode-about.png)
 
-##### **Dark_Mode**
+![gambar](github/light-mode-projek.png)
 
-![gambar](github/dark-mode.png)
+![gambar](github/light-mode-skill.png)
 
-## Skill & Tools
+![gambar](github/light-mode-github.png)
 
-##### **Light_mode**
+![gambar](github/light-mode-kontak.png)
 
-![gambar]()
 
-##### **Dark_mode**
 
-![gambar](github/skill.png)
 
+##### **Dark_Mode** 🌙🌙
+
+![gambar](github/dark-mode-hero.png)
+
+![gambar](github/dark-mode-about.png)
+
+![gambar](github/dark-mode-projek.png)
+
+![gambar](github/dark-mode-skill.png)
+
+![gambar](github/dark-mode-github.png)
+
+![gambar](github/dark-mode-kontak.png)
 
 
 
