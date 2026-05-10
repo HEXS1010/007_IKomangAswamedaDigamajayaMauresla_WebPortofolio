@@ -1,4 +1,4 @@
-# **Website Portofolio**
+<h1 align="center">💼💼Website Portofolio💼💼</h1> 
 
 ## Identitas
 Nama: I Komang Aswameda Digamajaya Maureska <br>
@@ -30,7 +30,7 @@ Dengan desain yang modern dan responsif, website ini menampilkan berbagai proyek
 
 # 🌐 preview website
 
-##### **Light_Mode** 🌤️🌤️
+<h2 align="center">Light_Mode 🌤️🌤️</h2> 
 
 ![gambar](github/light-mode-hero.png)
 
@@ -47,7 +47,7 @@ Dengan desain yang modern dan responsif, website ini menampilkan berbagai proyek
 
 
 
-##### **Dark_Mode** 🌙🌙
+<h2 align="center">Dark_Mode 🌙🌙</h2> 
 
 ![gambar](github/dark-mode-hero.png)
 
