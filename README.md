@@ -1,6 +1,6 @@
 <h1 align="center">💼💼Website Portofolio💼💼</h1> 
 
-## Identitas
+## 🙍‍♂️ Identitas
 Nama: I Komang Aswameda Digamajaya Maureska <br>
 Instansi: SMA (SLUA) SARASWATI 1 DENPASAR
 
@@ -44,8 +44,11 @@ Dengan desain yang modern dan responsif, website ini menampilkan berbagai proyek
 
 ![gambar](github/light-mode-kontak.png)
 
+![gambar](github/light-mode-pencapaian.png)
 
 
+<br>
+<br>
 
 <h2 align="center">Dark_Mode 🌙🌙</h2> 
 
@@ -60,6 +63,8 @@ Dengan desain yang modern dan responsif, website ini menampilkan berbagai proyek
 ![gambar](github/dark-mode-github.png)
 
 ![gambar](github/dark-mode-kontak.png)
+
+![gambar](github/dark-mode-pencapaian.png)
 
 
 
