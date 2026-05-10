@@ -59,6 +59,35 @@ window.addEventListener(
   { passive: true },
 );
 
+/* kalau discroll dia hilang dan muncul */
+let lastScrollY = window.scrollY;
+let ticking = false;
+const HIDE_THRESHOLD = 120;
+
+window.addEventListener(
+  "scroll",
+  function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        const currentScrollY = window.scrollY;
+
+        navbar.classList.toggle("scrolled", currentScrollY > 20);
+
+        if (currentScrollY > lastScrollY && currentScrollY > HIDE_THRESHOLD) {
+          navbar.classList.add("hidden");
+        } else {
+          navbar.classList.remove("hidden");
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  },
+  { passive: true },
+);
+
 /* apa bila melebihi 768 */
 window.addEventListener(
   "resize",

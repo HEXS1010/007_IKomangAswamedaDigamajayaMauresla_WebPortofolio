@@ -59,6 +59,35 @@ window.addEventListener(
   { passive: true },
 );
 
+/* kalau discroll dia hilang dan muncul */
+let lastScrollY = window.scrollY;
+let ticking = false;
+const HIDE_THRESHOLD = 120;
+
+window.addEventListener(
+  "scroll",
+  function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        const currentScrollY = window.scrollY;
+
+        navbar.classList.toggle("scrolled", currentScrollY > 20);
+
+        if (currentScrollY > lastScrollY && currentScrollY > HIDE_THRESHOLD) {
+          navbar.classList.add("hidden");
+        } else {
+          navbar.classList.remove("hidden");
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  },
+  { passive: true },
+);
+
 /* apa bila melebihi 768 */
 window.addEventListener(
   "resize",
@@ -109,34 +138,20 @@ const projects = [
     desc: "Web ini dibuat untuk orang yang ingin membeli makanan tanpa ribet, yang dimana selain menyajikan makanan yang enak web ini memberikan UI/UX yang sangat cantik, mulai dari permainan warna dan lain lain.",
     tech: ["Canva", "Javascript", "CSS"],
     link: "#",
-  },
-  {
-    title: "Judul Projek 6",
-    category: "Frontend",
-    image: "img/project6.png",
-    desc: "Deskripsi proyek keenam kamu bisa ditulis di sini.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    link: "#",
-  },
-  {
-    title: "Judul Projek 7",
-    category: "Web App",
-    image: "img/project7.png",
-    desc: "Deskripsi proyek ketujuh kamu bisa ditulis di sini.",
-    tech: ["React", "CSS Modules"],
-    link: "#",
-  },
+  }
 ];
 
 // slider logika
 const slider = document.getElementById("projectSlider");
 const dotsContainer = document.getElementById("dots");
 
-const CARD_WIDTH = 620;
 let currentIndex = 0;
-let isDragging = false;
-let startX = 0;
-let scrollStart = 0;
+
+function getCardWidth() {
+  const card = slider.querySelector(".proj-card");
+  if (!card) return 620;
+  return card.offsetWidth + 20;
+}
 
 function buildDots() {
   dotsContainer.innerHTML = "";
@@ -157,46 +172,85 @@ function updateDots(index) {
 
 function goTo(index) {
   currentIndex = Math.max(0, Math.min(index, projects.length - 1));
-  slider.style.transform = `translateX(-${currentIndex * CARD_WIDTH}px)`;
+  slider.style.transform = `translateX(-${currentIndex * getCardWidth()}px)`;
   updateDots(currentIndex);
 }
 
-slider.addEventListener("mousedown", (e) => {
-  isDragging = true;
-  startX = e.pageX;
-  scrollStart = currentIndex * CARD_WIDTH;
-  slider.style.transition = "none";
-});
+// scroll mouse buat laptop aja rusak kalau pakai geser manual 
+let isScrolling = false;
 
-document.addEventListener("mousemove", (e) => {
-  if (!isDragging) return;
-  const diff = startX - e.pageX;
-  slider.style.transform = `translateX(-${scrollStart + diff}px)`;
-});
+document.querySelector(".slider-wrapper").addEventListener(
+  "wheel",
+  (e) => {
+    if (window.matchMedia("(pointer: coarse)").matches) return;
 
-document.addEventListener("mouseup", (e) => {
-  if (!isDragging) return;
-  isDragging = false;
-  slider.style.transition = "transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)";
-  const diff = startX - e.pageX;
-  if (diff > 60) goTo(currentIndex + 1);
-  else if (diff < -60) goTo(currentIndex - 1);
-  else goTo(currentIndex);
-});
+    e.preventDefault();
+    if (isScrolling) return;
+    isScrolling = true;
 
-slider.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].pageX;
-  scrollStart = currentIndex * CARD_WIDTH;
-  slider.style.transition = "none";
-});
+    if (e.deltaY > 0 || e.deltaX > 0) {
+      goTo(currentIndex + 1);
+    } else {
+      goTo(currentIndex - 1);
+    }
 
-slider.addEventListener("touchend", (e) => {
-  slider.style.transition = "transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)";
-  const diff = startX - e.changedTouches[0].pageX;
-  if (diff > 50) goTo(currentIndex + 1);
-  else if (diff < -50) goTo(currentIndex - 1);
-  else goTo(currentIndex);
-});
+    setTimeout(() => {
+      isScrolling = false;
+    }, 500);
+  },
+  { passive: false },
+);
+
+// bisa di geser pakai jari
+let touchStartX = 0;
+let touchStartY = 0;
+let isDragging = false;
+
+document.querySelector(".slider-wrapper").addEventListener(
+  "touchstart",
+  (e) => {
+    touchStartX = e.touches[0].pageX;
+    touchStartY = e.touches[0].pageY;
+    isDragging = false;
+  },
+  { passive: true },
+);
+
+document.querySelector(".slider-wrapper").addEventListener(
+  "touchmove",
+  (e) => {
+    const diffX = Math.abs(touchStartX - e.touches[0].pageX);
+    const diffY = Math.abs(touchStartY - e.touches[0].pageY);
+
+    // kalau gerak horizontal lebih dominan, tandai sebagai drag slider
+    if (diffX > diffY && diffX > 10) {
+      isDragging = true;
+      e.preventDefault(); // cegah scroll halaman ikut bergerak
+    }
+  },
+  { passive: false },
+);
+
+document.querySelector(".slider-wrapper").addEventListener(
+  "touchend",
+  (e) => {
+    if (!isDragging) return;
+    const diff = touchStartX - e.changedTouches[0].pageX;
+    if (diff > 50) goTo(currentIndex + 1);
+    else if (diff < -50) goTo(currentIndex - 1);
+    isDragging = false;
+  },
+  { passive: true },
+);
+
+// recalculate saat resize
+window.addEventListener(
+  "resize",
+  () => {
+    goTo(currentIndex);
+  },
+  { passive: true },
+);
 
 // pop up nya
 function openModal(index) {

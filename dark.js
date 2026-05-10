@@ -81,7 +81,7 @@ darkStyles.textContent = `
 }
 
 /* sama juga baut gambaer hero */
-:root.dark .hero-center::after {
+/* :root.dark .hero-center::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -102,7 +102,7 @@ darkStyles.textContent = `
     );
   z-index: 2;
   pointer-events: none;
-}
+} */
 
 
 
@@ -219,8 +219,8 @@ darkStyles.textContent = `
   background: #0d1117;
 }
 :root.dark .about-bg {
-  opacity: 0.06;
-  filter: grayscale(1) brightness(0.3);
+  opacity: 0.6;
+  background-image: url("img/bg-about-dark.png")
 }
 :root.dark .about-tag {
   color: #9fef00;

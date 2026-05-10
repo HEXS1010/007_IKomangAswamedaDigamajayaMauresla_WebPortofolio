@@ -66,11 +66,17 @@ ul {
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--gray-light);
   z-index: 1000;
-  transition: box-shadow var(--transition);
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow var(--transition);
 }
 
 .navbar.scrolled {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
 }
 
 /* Logo */
@@ -597,7 +603,7 @@ ul {
   margin-bottom: 48px;
 }
 
-/* brand column */
+/* logo colum */
 .footer-brand {
   display: flex;
   flex-direction: column;
@@ -623,7 +629,35 @@ ul {
   max-width: 260px;
 }
 
-/* column title */
+/* sosial media */
+.hero-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social-link {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1.5px solid var(--gray-light);
+  font-size: 1rem;
+  color: var(--gray);
+  transition: all var(--transition);
+}
+
+.social-link:hover {
+  border-color: var(--green);
+  color: var(--green);
+  background: var(--green-pale);
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.2);
+  transform: translateY(-3px);
+}
+
+/* judul colom */
 .footer-col-title {
   font-family: var(--font-display);
   font-size: 0.82rem;
@@ -634,7 +668,7 @@ ul {
   margin-bottom: 16px;
 }
 
-/* links list */
+/* footer nav */
 .footer-links {
   list-style: none;
   display: flex;
@@ -657,7 +691,7 @@ ul {
   transform: translateX(4px);
 }
 
-/* pembatalaan hover */
+/* pembatalan hover */
 .footer-link.no-hover:hover {
   color: #a4b3c1;
   transform: none;
@@ -684,7 +718,7 @@ ul {
   margin-bottom: 28px;
 }
 
-/* bottom row */
+/* copyright */
 .footer-bottom {
   display: flex;
   align-items: center;
@@ -730,53 +764,62 @@ ul {
   .hamburger {
     display: flex;
   }
-}
 
+  .hero-socials {
+    justify-content: center;
+  }
+
+  .social-link {
+    font-size: 15px;
+    width: 35px;
+    height: 35px;
+  }
+}
 
 /* responsif pencapaian */
 @media (max-width: 1024px) {
   .achievement-section {
     padding: calc(var(--nav-height) + 40px) 20px 60px;
   }
-  
+
   .achievement-header {
     margin-bottom: 40px;
   }
-  
+
   .achievement-subtitle {
     font-size: 0.88rem;
   }
-  
+
   .achievement-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
     max-width: 100%;
   }
-  
+
   .achiev-name {
     font-size: 0.85rem;
   }
-  
+
   .achiev-short {
     font-size: 0.75rem;
   }
-  
+
   /* popup mobile */
   .ach-popup-bg {
     padding: 16px;
     align-items: flex-end;
   }
-  
+
   .ach-popup {
     max-width: 100%;
     border-radius: 20px 20px 16px 16px;
     max-height: 85vh;
   }
-  
+
   .ach-popup-title {
     font-size: 1.1rem;
   }
-  
+
   .ach-popup-desc {
     font-size: 0.84rem;
   }
@@ -787,19 +830,19 @@ ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
   }
-  
+
   .achiev-badge {
     display: none;
   }
-  
+
   .achiev-date {
     font-size: 10px;
   }
-  
+
   .ach-popup-bg {
     padding: 12px;
   }
-  
+
   .ach-popup-body {
     padding: 16px 16px 20px;
   }
