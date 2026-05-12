@@ -263,6 +263,32 @@ ul {
   font-weight: 600;
 }
 
+/* animasi */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.project-header,
+.proj-card,
+.footer-brand,
+.footer-col {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: transform, opacity;
+}
+
+.project-enter {
+  animation: fadeUp 0.9s ease forwards;
+}
+
 /* project section */
 .project-section {
   min-height: 100vh;
@@ -821,7 +847,7 @@ ul {
   }
 
   .project-subtitle {
-    font-size: 0.70rem;
+    font-size: 0.7rem;
   }
 
   .proj-badge {

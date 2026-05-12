@@ -19,12 +19,6 @@ function startLoading() {
     screen.remove();
     document.body.style.overflow = "";
     initAos();
-  }, 4400);
-
-  setTimeout(() => {
-    screen.remove();
-    document.body.style.overflow = "";
-    initAos();
 
     document.querySelector(".navbar").classList.add("nav-enter");
 
@@ -381,7 +375,7 @@ if (ghSection) {
   ).observe(ghSection);
 }
 
-/* aos setup */
+/* aos */
 const animationMap = [
   {
     selector: ".navbar",
@@ -526,4 +520,3 @@ function initAos() {
     easing: "ease-out-cubic",
   });
 }
-s
