@@ -81,17 +81,19 @@ ul {
 
 /* Logo */
 .nav-logo {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--dark);
-  letter-spacing: -0.5px;
+  width: 10rem;
+  display: flex;
+  align-items: center;
   position: relative;
   z-index: 1200;
+  padding-left: 10px;
 }
 
-.nav-logo span {
-  color: var(--green);
+.nav-logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 /* Nav Links */
@@ -210,15 +212,9 @@ ul {
 
 /* logo sidebar */
 .sidebar-logo {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--dark);
-  letter-spacing: -0.5px;
+  width: 8.5rem;
 }
-.sidebar-logo span {
-  color: var(--green);
-}
+
 
 /* Tombol tutup x */
 .sidebar-close {
@@ -320,7 +316,7 @@ ul {
 
 .achievement-title {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-size: clamp(2rem, 5vw, 3.6rem);
   font-weight: 800;
   color: var(--dark);
   letter-spacing: -1.5px;
@@ -610,16 +606,19 @@ ul {
   gap: 16px;
 }
 
+/* logo */
 .footer-logo {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--white);
-  letter-spacing: -0.5px;
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-.footer-logo span {
-  color: var(--green-light);
+.footer-logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .footer-brand-desc {
@@ -761,6 +760,10 @@ ul {
     display: none;
   }
 
+  .nav-logo {
+    width: 8rem;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -807,7 +810,7 @@ ul {
   /* popup mobile */
   .ach-popup-bg {
     padding: 16px;
-    align-items: flex-end;
+    align-items: center;
   }
 
   .ach-popup {
@@ -829,6 +832,10 @@ ul {
   .achievement-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
+  }
+
+  .achievement-subtitle {
+    font-size: 0.70rem;
   }
 
   .achiev-badge {
@@ -870,8 +877,19 @@ ul {
     gap: 32px;
   }
 
+  .footer-brand {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   .footer-brand-desc {
-    max-width: 100%;
+    max-width: 95%;
+    font-size: 13px;
+  }
+
+  .footer-logo {
+    width: 9.5rem;
   }
 
   .footer-bottom {

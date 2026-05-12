@@ -105,7 +105,7 @@ const projects = [
     image: "img/web_sekolah.jpeg",
     desc: "Ini adalah web pertama saya selama belajar coding, yang dimana saya membuat website ini iseng saja, dan lumayan dari segi tampilan dan layout, namun web ini saya masih memiliki kekurangan yang lumayan karena web ini saya tinggalkan sebelum selesai.",
     tech: ["HTML", "CSS", "JavaScript"],
-    link: "#",
+    link: "https://github.com/HEXS1010/web-sekolah",
   },
   {
     title: "Portofolio Pertama",
@@ -113,7 +113,7 @@ const projects = [
     image: "img/porto_1.png",
     desc: "Web ini dibuat pertama kali memiliki tujuan yang sangat bagus, karena menjelaskan latar belakang saya dengan detail dan warna yang cukup baik, memang terlihat sederhana namun tentu saya tidak melupakan inti dari pembuatan website portofolio saya yang pertama ini.",
     tech: ["HTML", "CSS", "JavaScript"],
-    link: "#",
+    link: "https://github.com/HEXS1010/portofolio-1",
   },
   {
     title: "Protofolio Kedua",
@@ -129,7 +129,7 @@ const projects = [
     image: "img/web_coding.png",
     desc: "web ini dibuat karena melihat seseorang yang kesusahan dalam belajar coding yang dimana mereka belajar tanpa alur yang jelas menyebabkan mereka kebingungan, tapi tenang solusinya coding learn disini kamu bukan hanya belajar coding tapi juga berinteraksi bersama dengan semua orang dan berbagi ilmu tentang coding dan masih banyak lagi. Coding learn menyediakan tempat latihan coding tanpa download text editor dan alur pembelajaran yang lebih jelas.",
     tech: ["HTML", "CSS", "GSAP"],
-    link: "#",
+    link: "https://github.com/HEXS1010/projek",
   },
   {
     title: "Web Ramen",
@@ -137,7 +137,7 @@ const projects = [
     image: "img/web_ramen.png",
     desc: "Web ini dibuat untuk orang yang ingin membeli makanan tanpa ribet, yang dimana selain menyajikan makanan yang enak web ini memberikan UI/UX yang sangat cantik, mulai dari permainan warna dan lain lain.",
     tech: ["Canva", "Javascript", "CSS"],
-    link: "#",
+    link: "https://github.com/HEXS1010/web-ramen",
   }
 ];
 

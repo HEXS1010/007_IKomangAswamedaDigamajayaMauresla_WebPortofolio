@@ -114,18 +114,25 @@ const projectList = [
     desc: "Website ini adalah website kedua yang saya buat setelah web sekolah yang dimana web ini cukup sederhana dan interaksi dalam web ini masih agak kaku tapi sudah termasuk bagus dalam pemula. ",
   },
   {
-    img: "img/achievement3.jpeg",
+    img: "img/porto_2.png",
     badge: "website",
-    title: "Sertifikat Belajar Dasar AI Dicoding",
+    title: "Website portofolio 2",
     date: "10 Juni 2023",
-    desc: "Sertifikan ini diraih dengan mengikuti bootcamp dari Dicoding, yang dimana saya menyelesaikan pelajaran Dasar AI. yang dimana saya diajarkan sejarah AI apa saja manfaatnya, cara mengunakanya, logika dari AI, model model AI apa saja, cara membuat AI.",
+    desc: "Website portofolio 2 ini sudah modern yang dimana desain in sangat indah, karena dalam desain ini dibuat seperti di laur angkasa ada bintang dan gambar inti seperti matahari, lalu ada bahasa pemrograman seperti planet yang mengitari matahari.",
   },
   {
-    img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=85",
+    img: "img/web_coding.png",
     badge: "website",
-    title: "Cisco Certified Network Associate",
+    title: "Website Coding Learn",
     date: "5 Februari 2023",
-    desc: "Saya mendapatkan sertifikat ini dari cisco setelah menyelesaikan pembelajaran yang diberikan cisco. yang dimana kurikulum mereka mengejarkan saya tentang",
+    desc: "Website ini dibuat saat saya mengikuti lomba techtopia tahun 2025, yang dimana saya membuat website belajar coding dengan struktur yang bagus dan terarah bagi pemula yang baru terjun dalam dunia coding.",
+  },
+  {
+    img: "img/web_ramen.png",
+    badge: "website",
+    title: "Website Ramen",
+    date: "5 Februari 2023",
+    desc: " Website ini dibuat juga untuk lomba Hackaton, yang dimana website ini dibuat untuk UMKM yang dimana website ini menjual ramen berbagia rasa yang enak dan lezat, selain menjual ramen mereka juga ada menjual merchandise yaitu baju, gantungan kunci, tas belanja, dan sepatu.",
   },
 ];
 

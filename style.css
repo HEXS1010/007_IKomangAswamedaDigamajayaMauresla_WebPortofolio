@@ -81,7 +81,7 @@ ul {
 
 /* Logo */
 .nav-logo {
-  width: 5rem;
+  width: 10rem;
   display: flex;
   align-items: center;
   position: relative;
@@ -96,16 +96,12 @@ ul {
   display: block;
 }
 
-.nav-logo span {
-  color: var(--green);
-}
-
 /* Nav Links */
 .nav-links {
   display: flex;
   align-items: center;
   gap: 4px;
-  position: absolute; 
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -219,12 +215,7 @@ ul {
 
 /* logo sidebar */
 .sidebar-logo {
-  width: 4rem;
-  color: var(--dark);
-  letter-spacing: -0.5px;
-}
-.sidebar-logo span {
-  color: var(--green);
+  width: 8.5rem;
 }
 
 /* Tombol tutup x */
@@ -2000,16 +1991,19 @@ ul {
   gap: 16px;
 }
 
+/* logo */
 .footer-logo {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--white);
-  letter-spacing: -0.5px;
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-.footer-logo span {
-  color: var(--green-light);
+.footer-logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .footer-brand-desc {
@@ -2149,7 +2143,7 @@ ul {
   .nav-btn {
     display: none;
   }
-  
+
   .hamburger {
     display: flex;
   }
@@ -2183,7 +2177,7 @@ ul {
   }
 
   .nav-logo {
-    width: 4.5rem;
+    width: 8rem;
   }
 
   .hero {
@@ -2416,7 +2410,7 @@ ul {
   }
 
   .proj-card {
-    flex: 0 0 460px;
+    flex: 0 0 490px;
   }
 
   .proj-img-wrap {
@@ -2434,11 +2428,12 @@ ul {
   }
 
   .proj-card {
-    flex: 0 0 calc(100vw - 25px);
+    flex: 0 0 calc(100vw - 32px);
   }
 
   .proj-img-wrap {
-    height: 200px;
+    height: auto; 
+    aspect-ratio: 16/9; 
     border-radius: 14px;
   }
 
@@ -2701,8 +2696,19 @@ ul {
     gap: 32px;
   }
 
+  .footer-brand {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   .footer-brand-desc {
-    max-width: 100%;
+    max-width: 95%;
+    font-size: 14px;
+  }
+
+  .footer-logo {
+    width: 10rem;
   }
 
   .footer-bottom {
