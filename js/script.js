@@ -1,3 +1,46 @@
+/* loading */
+function startLoading() {
+  const screen = document.getElementById("loading-screen");
+  const logo = document.getElementById("loading-logo");
+
+  setTimeout(() => {
+    logo.classList.add("pop");
+  }, 200);
+
+  setTimeout(() => {
+    logo.classList.add("fade");
+  }, 3200);
+
+  setTimeout(() => {
+    screen.classList.add("slide-up");
+  }, 3700);
+
+  setTimeout(() => {
+    screen.remove();
+    document.body.style.overflow = "";
+    initAos();
+  }, 4400);
+
+  setTimeout(() => {
+    screen.remove();
+    document.body.style.overflow = "";
+    initAos();
+
+    document.querySelector(".navbar").classList.add("nav-enter");
+
+    const isMobile = window.innerWidth <= 768;
+    const heroClass = isMobile ? "hero-enter-mobile" : "hero-enter";
+    document.querySelector(".hero-left").classList.add(heroClass);
+    document.querySelector(".hero-right").classList.add(heroClass);
+    document.querySelector(".hero-center").classList.add(heroClass);
+  }, 4400);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.style.overflow = "hidden";
+  startLoading();
+});
+
 // navbar
 const hamburger = document.getElementById("hamburger");
 const sidebar = document.getElementById("sidebar");
@@ -138,7 +181,7 @@ const projects = [
     desc: "Web ini dibuat untuk orang yang ingin membeli makanan tanpa ribet, yang dimana selain menyajikan makanan yang enak web ini memberikan UI/UX yang sangat cantik, mulai dari permainan warna dan lain lain.",
     tech: ["Canva", "Javascript", "CSS"],
     link: "https://github.com/HEXS1010/web-ramen",
-  }
+  },
 ];
 
 // slider logika
@@ -176,7 +219,7 @@ function goTo(index) {
   updateDots(currentIndex);
 }
 
-// scroll mouse buat laptop aja rusak kalau pakai geser manual 
+// scroll mouse buat laptop aja rusak kalau pakai geser manual
 let isScrolling = false;
 
 document.querySelector(".slider-wrapper").addEventListener(
@@ -337,3 +380,150 @@ if (ghSection) {
     { threshold: 0.2 },
   ).observe(ghSection);
 }
+
+/* aos setup */
+const animationMap = [
+  {
+    selector: ".navbar",
+    desktop: "fade-down",
+    mobile: "fade-down",
+    delay: 0,
+    duration: 900,
+  },
+  {
+    selector: ".hero-left",
+    desktop: "fade-right",
+    mobile: "fade-up",
+    delay: 200,
+    duration: 900,
+  },
+  {
+    selector: ".hero-center",
+    desktop: "fade-up",
+    delay: 200,
+    duration: 900,
+  },
+  {
+    selector: ".hero-right",
+    desktop: "fade-left",
+    mobile: "fade-up",
+    delay: 200,
+    duration: 900,
+  },
+  {
+    selector: ".about-left",
+    desktop: "fade-right",
+    mobile: "fade-up",
+    delay: 200,
+    duration: 900,
+  },
+  {
+    selector: ".about-right",
+    desktop: "fade-left",
+    mobile: "fade-up",
+    delay: 200,
+    duration: 900,
+  },
+  {
+    selector: ".projects-left",
+    desktop: "fade-right",
+    mobile: "fade-up",
+    delay: 200,
+    duration: 900,
+  },
+  {
+    selector: ".proj-card",
+    desktop: "fade-left",
+    mobile: "fade-up",
+    delay: 0,
+    duration: 700,
+  },
+  {
+    selector: ".skills-left",
+    desktop: "fade-right",
+    mobile: "fade-up",
+    delay: 0,
+    duration: 800,
+  },
+  {
+    selector: ".skill-card",
+    desktop: "fade-up",
+    mobile: "fade-up",
+    delay: 0,
+    duration: 600,
+  },
+  {
+    selector: ".gh-hero",
+    desktop: "fade-up",
+    mobile: "fade-up",
+    delay: 0,
+    duration: 800,
+  },
+  {
+    selector: ".gh-stat-item",
+    desktop: "fade-up",
+    mobile: "fade-up",
+    delay: 0,
+    duration: 700,
+  },
+  {
+    selector: ".gh-graph-panel",
+    desktop: "fade-left",
+    mobile: "fade-up",
+    delay: 150,
+    duration: 800,
+  },
+  {
+    selector: ".contact-left",
+    desktop: "fade-right",
+    mobile: "fade-up",
+    delay: 0,
+    duration: 800,
+  },
+  {
+    selector: ".contact-right",
+    desktop: "fade-left",
+    mobile: "fade-up",
+    delay: 200,
+    duration: 800,
+  },
+  {
+    selector: ".footer-brand",
+    desktop: "fade-up",
+    mobile: "fade-up",
+    delay: 0,
+    duration: 700,
+  },
+  {
+    selector: ".footer-col",
+    desktop: "fade-up",
+    mobile: "fade-up",
+    delay: 0,
+    duration: 700,
+  },
+];
+
+
+function initAos() {
+  const isMobile = window.innerWidth <= 768;
+
+  animationMap.forEach(({ selector, desktop, mobile, delay, duration }) => {
+    document.querySelectorAll(selector).forEach((el, i) => {
+      el.setAttribute("data-aos", isMobile ? mobile : desktop);
+      el.setAttribute("data-aos-duration", duration);
+
+      if (selector === ".skill-card") {
+        el.setAttribute("data-aos-delay", 0);
+      } else {
+        el.setAttribute("data-aos-delay", delay + i * 120);
+      }
+    });
+  });
+
+  AOS.init({
+    once: true,
+    offset: 100,
+    easing: "ease-out-cubic",
+  });
+}
+s

@@ -17,12 +17,24 @@
     />
 
     <!-- css -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/style.css" />
 
     <!-- icon -->
     <link rel="stylesheet" href="./css/all.min.css" />
+
+    <!-- aos -->
+     <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
   </head>
   <body>
+
+    <!-- loading -->
+    <div id="loading-screen">
+      <div id="loading-logo">
+        <img src="img/logoanya.png" alt="Logo" />
+      </div>
+    </div>
+
+
     <!-- NAVBAR -->
     <nav class="navbar">
       <!-- logo -->
@@ -577,13 +589,13 @@
           </div>
         </div>
 
-        <!-- panel kanan: contribution graph -->
+        <!-- panel kontribusi github -->
         <div class="gh-graph-panel">
           <div class="gh-graph-header">
             <div>
-              <span class="gh-graph-title">SYSTEM_LOG</span>
+              <span class="gh-graph-title">AKTIVITAS GITHUB</span>
               <span class="gh-graph-desc"
-                >Annual code contribution density (last 12 months)</span
+                >Rekam jejak kontribusi kode selama 12 bulan terakhi</span
               >
             </div>
             <div class="gh-graph-legend">
@@ -814,7 +826,8 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="dark.js"></script>
+    <script src="node_modules/aos/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/dark.js"></script>
   </body>
 </html>
