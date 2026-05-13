@@ -35,6 +35,15 @@ Di era digital yang terus berkembang pesat, kehadiran online yang kuat menjadi s
 - Selesai
 
 
+## ✏️ Note
+
+- dokumentasi.pdf ini berisi gambar website saya
+- folder github_dokumentasi adalah folder yang berisi foto website saya untuk di README
+- folder css, dan webfonts adalah folder punya icon awesome
+- folder node_modules, package-lock.json, dan package.json adalah folder punya AOS
+- folder img adalah untuk menaruh aset gambar website saya
+- folder style, dan js adalah untuk menaruh css dan js untuk website saya 
+
 # 🌐 preview website
 
 <h2 align="center">🌤️🌤️ Light_Mode 🌤️🌤️</h2> 
