@@ -28,6 +28,12 @@ Di era digital yang terus berkembang pesat, kehadiran online yang kuat menjadi s
 
 ## ⚙️ Cara Menjalankan 
 
+- Klik repo saya yang berjudul 007_IKomangAswamedaDigamajayaMauresla_WebPortofolio
+- Lalu klik setting
+- Cari pages disidebar menu dikiri
+- Klik url yang ada di bawah tulisan github pages
+- Selesai
+
 
 # 🌐 preview website
 
