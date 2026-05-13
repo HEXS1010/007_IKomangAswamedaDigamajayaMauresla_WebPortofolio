@@ -31,7 +31,7 @@ Di era digital yang terus berkembang pesat, kehadiran online yang kuat menjadi s
 
 # 🌐 preview website
 
-<h2 align="center">Light_Mode 🌤️🌤️</h2> 
+<h2 align="center">🌤️🌤️ Light_Mode 🌤️🌤️</h2> 
 
 ![gambar](github_dokumentasi/light-mode-hero.png)
 
@@ -53,7 +53,7 @@ _dokumentasi
 <br>
 <br>
 
-<h2 align="center">Dark_Mode 🌙🌙</h2> 
+<h2 align="center">🌙🌙 Dark_Mode 🌙🌙</h2> 
 
 ![gambar](github_dokumentasi/dark-mode-hero.png)
 
