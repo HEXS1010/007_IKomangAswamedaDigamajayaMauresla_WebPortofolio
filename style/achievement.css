@@ -38,6 +38,12 @@ body {
   background-color: #fafffe;
   color: var(--dark);
   overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {

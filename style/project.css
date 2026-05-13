@@ -37,6 +37,12 @@ body {
   background-color: #fafffe;
   color: var(--dark);
   overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {
@@ -274,7 +280,6 @@ ul {
     transform: translateY(0);
   }
 }
-
 
 .project-header,
 .proj-card,
