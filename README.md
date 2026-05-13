@@ -33,21 +33,21 @@ Di era digital yang terus berkembang pesat, kehadiran online yang kuat menjadi s
 
 <h2 align="center">Light_Mode 🌤️🌤️</h2> 
 
-![gambar](github/light-mode-hero.png)
+![gambar](github_dokumentasi/light-mode-hero.png)
 
-![gambar](github/light-mode-about.png)
+![gambar](github_dokumentasi/light-mode-about.png)
 
-![gambar](github/light-mode-projek.png)
+![gambar](github_dokumentasi/light-mode-projek.png)
 
-![gambar](github/light-mode-skill.png)
+![gambar](github_dokumentasi/light-mode-skill.png)
 
-![gambar](github/light-mode-github.png)
+![gambar](github_dokumentasi/light-mode-github.png)
+_dokumentasi
+![gambar](github_dokumentasi/light-mode-kontak.png)
 
-![gambar](github/light-mode-kontak.png)
+![gambar](github_dokumentasi/light-mode-hal-projek.png)
 
-![gambar](github/light-mode-hal-projek.png)
-
-![gambar](github/light-mode-achiev.png)
+![gambar](github_dokumentasi/light-mode-achiev.png)
 
 
 <br>
@@ -55,21 +55,21 @@ Di era digital yang terus berkembang pesat, kehadiran online yang kuat menjadi s
 
 <h2 align="center">Dark_Mode 🌙🌙</h2> 
 
-![gambar](github/dark-mode-hero.png)
+![gambar](github_dokumentasi/dark-mode-hero.png)
 
-![gambar](github/dark-mode-about.png)
+![gambar](github_dokumentasi/dark-mode-about.png)
 
-![gambar](github/dark-mode-projek.png)
+![gambar](github_dokumentasi/dark-mode-projek.png)
 
-![gambar](github/dark-mode-skill.png)
+![gambar](github_dokumentasi/dark-mode-skill.png)
 
-![gambar](github/dark-mode-github.png)
+![gambar](github_dokumentasi/dark-mode-github.png)
 
-![gambar](github/dark-mode-kontak.png)
+![gambar](github_dokumentasi/dark-mode-kontak.png)
 
-![gambar](github/dark-mode-hal-projek.png)
+![gambar](github_dokumentasi/dark-mode-hal-projek.png)
 
-![gambar](github/dark-mode-achiev.png)
+![gambar](github_dokumentasi/dark-mode-achiev.png)
 
 
 
