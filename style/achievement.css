@@ -215,7 +215,6 @@ ul {
   width: 8.5rem;
 }
 
-
 /* Tombol tutup x */
 .sidebar-close {
   width: 36px;
@@ -265,6 +264,31 @@ ul {
   background: var(--green-pale);
   border-color: rgba(22, 163, 74, 0.3);
   font-weight: 600;
+}
+
+/* animasi */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.achievement-header,
+.achiev-card,
+.footer-brand,
+.footer-col {
+  opacity: 0;
+  transform: translateY(50px);
+  will-change: transform, opacity;
+}
+
+.achiev-enter {
+  animation: fadeUp 0.9s ease forwards;
 }
 
 /* achievement */
@@ -761,7 +785,7 @@ ul {
   }
 
   .nav-logo {
-    width: 8rem;
+    width: 10rem;
   }
 
   .hamburger {
@@ -835,7 +859,7 @@ ul {
   }
 
   .achievement-subtitle {
-    font-size: 0.70rem;
+    font-size: 0.7rem;
   }
 
   .achiev-badge {

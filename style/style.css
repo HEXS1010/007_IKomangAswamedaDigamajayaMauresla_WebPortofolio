@@ -119,7 +119,9 @@ ul {
   opacity: 0;
   transition:
     transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow var(--transition);
+  will-change: transform;
 }
 
 .navbar.scrolled {
@@ -142,7 +144,7 @@ ul {
 }
 
 .navbar.hidden {
-  transform: translateY(-100%);
+  transform: translateY(-100%) !important;
 }
 
 /* Logo */
@@ -2309,7 +2311,7 @@ ul {
   }
 
   .nav-logo {
-    width: 8rem;
+    width: 10rem;
   }
 
   .hero {
@@ -2766,7 +2768,7 @@ ul {
     overflow-x: auto;
     overflow-y: hidden;
     border-radius: 8px;
-    
+
     scrollbar-width: none;
     -ms-overflow-style: none;
   }

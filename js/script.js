@@ -1,3 +1,9 @@
+const navbar = document.querySelector(".navbar");
+let lastScrollY = window.scrollY;
+let ticking = false;
+const HIDE_THRESHOLD = 120;
+let loadingDone = false;
+
 /* loading */
 function startLoading() {
   const screen = document.getElementById("loading-screen");
@@ -18,9 +24,22 @@ function startLoading() {
   setTimeout(() => {
     screen.remove();
     document.body.style.overflow = "";
+
+    lastScrollY = window.scrollY;
+    loadingDone = true;
+
     initAos();
 
-    document.querySelector(".navbar").classList.add("nav-enter");
+    const nav = document.querySelector(".navbar");
+    nav.classList.add("nav-enter");
+
+    setTimeout(() => {
+      nav.classList.remove("nav-enter");
+      nav.style.opacity = "1";
+      nav.style.transform = "";
+    }, 900);
+
+    // document.querySelector(".navbar").classList.add("nav-enter");
 
     const isMobile = window.innerWidth <= 768;
     const heroClass = isMobile ? "hero-enter-mobile" : "hero-enter";
@@ -41,7 +60,7 @@ const sidebar = document.getElementById("sidebar");
 const overlay = document.getElementById("overlay");
 const sidebarClose = document.getElementById("sidebarClose");
 const sidebarItems = document.querySelectorAll(".sidebar-item");
-const navbar = document.querySelector(".navbar");
+// const navbar = document.querySelector(".navbar");
 
 /* sidebar buka */
 function openSidebar() {
@@ -87,20 +106,6 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") closeSidebar();
 });
 
-/* show navbar  */
-window.addEventListener(
-  "scroll",
-  function () {
-    navbar.classList.toggle("scrolled", window.scrollY > 20);
-  },
-  { passive: true },
-);
-
-/* kalau discroll dia hilang dan muncul */
-let lastScrollY = window.scrollY;
-let ticking = false;
-const HIDE_THRESHOLD = 120;
-
 window.addEventListener(
   "scroll",
   function () {
@@ -110,10 +115,12 @@ window.addEventListener(
 
         navbar.classList.toggle("scrolled", currentScrollY > 20);
 
-        if (currentScrollY > lastScrollY && currentScrollY > HIDE_THRESHOLD) {
-          navbar.classList.add("hidden");
-        } else {
-          navbar.classList.remove("hidden");
+        if (loadingDone) {
+          if (currentScrollY > lastScrollY && currentScrollY > HIDE_THRESHOLD) {
+            navbar.classList.add("hidden");
+          } else {
+            navbar.classList.remove("hidden");
+          }
         }
 
         lastScrollY = currentScrollY;
@@ -496,7 +503,6 @@ const animationMap = [
     duration: 700,
   },
 ];
-
 
 function initAos() {
   const isMobile = window.innerWidth <= 768;

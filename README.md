@@ -18,13 +18,16 @@ Di era digital yang terus berkembang pesat, kehadiran online yang kuat menjadi s
 - Light_Mode and Dark_Mode
 - Navigasi Interaktif
 
-# 🛠️ Teknologi & Tools
+## 🛠️ Teknologi & Tools
 
 - HTML
 - CSS
 - JavaScript
 - AOS (Animate On Scroll)
 - Canva (Tools)
+
+## ⚙️ Cara Menjalankan 
+
 
 # 🌐 preview website
 
@@ -42,7 +45,9 @@ Di era digital yang terus berkembang pesat, kehadiran online yang kuat menjadi s
 
 ![gambar](github/light-mode-kontak.png)
 
-![gambar](github/light-mode-pencapaian.png)
+![gambar](github/light-mode-hal-projek.png)
+
+![gambar](github/light-mode-achiev.png)
 
 
 <br>
@@ -62,7 +67,9 @@ Di era digital yang terus berkembang pesat, kehadiran online yang kuat menjadi s
 
 ![gambar](github/dark-mode-kontak.png)
 
-![gambar](github/dark-mode-pencapaian.png)
+![gambar](github/dark-mode-hal-projek.png)
+
+![gambar](github/dark-mode-achiev.png)
 
 
 

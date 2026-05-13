@@ -159,3 +159,81 @@ function achCloseOutside(e) {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") achClose();
 });
+
+// AOS
+const animationMap = [
+  {
+    selector: ".achievement-header",
+    desktop: "fade-up",
+    mobile: "fade-up",
+    delay: 2000,
+    duration: 1000,
+  },
+  {
+    selector: ".achiev-card",
+    desktop: "fade-up",
+    mobile: "fade-up",
+    delay: 1000,
+    duration: 1000,
+  },
+  {
+    selector: ".footer-brand",
+    desktop: "fade-up",
+    mobile: "fade-up",
+    delay: 1000,
+    duration: 700,
+  },
+  {
+    selector: ".footer-col",
+    desktop: "fade-up",
+    mobile: "fade-up",
+    delay: 0,
+    duration: 700,
+  },
+];
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const delay = entry.target.dataset.delay || 0;
+
+        setTimeout(() => {
+          entry.target.classList.add("achiev-enter");
+        }, delay);
+
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+  },
+);
+
+// header
+const header = document.querySelector(".achievement-header");
+
+if (header) {
+  header.dataset.delay = 300;
+  observer.observe(header);
+}
+
+// cards
+document.querySelectorAll(".achiev-card").forEach((card) => {
+  card.dataset.delay = 500;
+  observer.observe(card);
+});
+
+// footer
+const footerBrand = document.querySelector(".footer-brand");
+
+if (footerBrand) {
+  footerBrand.dataset.delay = 100;
+  observer.observe(footerBrand);
+}
+
+document.querySelectorAll(".footer-col").forEach((col, i) => {
+  col.dataset.delay = i * 150;
+  observer.observe(col);
+});
